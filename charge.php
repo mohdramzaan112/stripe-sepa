@@ -50,7 +50,7 @@ if(isset($_POST["stripeSource"]) && !empty($_POST["stripeSource"])) {
         $date = date("Y-m-d H:i:s");
         
         //include database config file
-        include_once '../dbConfig.php';
+        include_once 'dbConfig.php';
 
         //insert transaction data into the database
         $sql = "INSERT INTO sepa_orders(name,email,item_name,currency,amount,payment_status,source_status,stripe_source,payment_id,client_secret,response,created)VALUES('".$name."','".$email."','".$itemName."','".$currency."','".$amount."','".$payment_status."','".$source_status."','".$stripe_source."','".$payment_id."','".$client_secret."','".$response."','".$date."')";
